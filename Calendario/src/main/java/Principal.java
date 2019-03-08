@@ -4,7 +4,7 @@ public class Principal {
 	
 	public static void main(String[] args) throws IOException {
 		
-		String dateI = "2019/05/20";//Lo ingresa en el feature
+		String dateI = "2019/04/01";//Lo ingresa en el feature
 		String [] dateIParts = dateI.split("\\/");
 		int dateYear = Integer.parseInt(dateIParts[0]);
 		int dateMonth = Integer.parseInt(dateIParts[1]);
@@ -76,11 +76,29 @@ public class Principal {
 		else if(numberMonthA==dateMonth) {
 			System.out.println("true");
 		}
-		else if(numberMonthA==(dateMonth+1)) {
+		else if((numberMonthA+1)==dateMonth) {
 			System.out.println("false");
 		}
 		else {
 			System.out.println("La fecha ingresada no está habilitada!");
+		}
+		
+		int [][] matriz = {{1,2,3,4,5,6,7},{8,9,10,11,12,13,14},{15,16,17,18,19,20,21},{22,23,24,25,26,27,28},{29,30,31,1,2,3,4},{5,6,7,8,9,10,11}};
+		System.out.println(matriz[5][6]);
+		for(int i=0; i<=5;i++) {
+			for(int j=0; j<=6;j++) {
+				int x = matriz [i][j]; //leer el elemento en la posicion i j
+				if(x==dateDay) {
+					String attribute = "Day"; //leer el atributo del elemento en la posicion i j
+					if(attribute.equals("Day")) {
+						System.out.println("Click en el dia"+dateDay);//hacer click en el elemento en la posicion i j
+					}
+					else {
+						System.out.println("System error");						
+					}
+				}
+				
+			}
 		}
 		
 		
